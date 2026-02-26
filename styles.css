@@ -1,7 +1,7 @@
 /* 
     This is a CSS comment. Please add your name to this file below:
     
-    NAME: 
+    NAME:Myzelle Phoenix 
 */
 /* -------------------------------------------------- */
 /* 
@@ -334,7 +334,246 @@ footer{
         - add the large box shadow
 */
 /* ADD SELECTOR AND STYLES HERE */
+:root{
+    /* COLOR THEME FROM ADOBE COLOR */
+    --dk-blue: #010326;
+    --dk-teal: #011526;
+    --lt-blue: #CEE4F2;
+    --teal: #436573;
+    --dk-gray: #0D0D0D;
 
+
+    --dk-blue-rgba: rgb(1 3 38 / 50%);
+    --dk-teal-rgba: rgb(1 21 38 / 50%);
+    --lt-blue-rgba: rgb(206 228 242 / 50%);
+    --teal-rgba: rgb(67 101 115 / 50%);
+    --dk-gray-rgba: rgb(13 13 13 / 50%);
+
+    --white: #fff;
+    --light-gray: #eaeaea;
+    --med-gray: #555;
+    
+    /* BOX SHADOW VARIABLES HERE */
+    --box-shadow-sm: -3px 3px 7px var(--med-gray);
+    --box-shadow-lg: -6px 6px 10px var(--med-gray);
+
+    /* FILTER SHADOWS HERE */
+    --filter-shadow-sm: drop-shadow(-3px 3px 7px var(--med-gray));
+    --filter-shadow-lg: drop-shadow(-6px 6px 10px var(--med-gray));
+}
+
+body{
+    background-color: var(--light-gray);
+    font-family: Raleway, sans-serif;
+    line-height: 1.4;
+    color: var(--dk-gray);
+    box-sizing: border-box;
+}
+
+header{
+    padding: 1em;
+    width: calc(100% - 2rem);
+    max-width: calc(1200px - 2rem);
+    margin: 0 auto 2rem auto;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-sm);
+}
+
+h1, h2{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0.25rem auto;
+}
+
+nav li{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+nav a{
+    display: block;
+    padding: 0.5rem;
+    width: 100%;
+    text-decoration: none;
+    background-color: var(--teal);
+    color: var(--white);
+    text-align: center;
+    box-shadow: var(--box-shadow-lg);
+}
+
+nav a:hover{
+    background-color: var(--dk-teal);
+    color: var(--white);
+    box-shadow: var(--box-shadow-sm);
+}
+
+a{
+    color: var(--dk-blue);
+    font-weight: 600;
+}
+
+a:hover{
+    color: var(--teal);
+}
+
+main{
+    width: calc(100% - 2rem);
+    max-width: calc(1200px - 2rem);
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+section{
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-sm);
+}
+
+p{
+    max-width: 65ch;
+    margin: 0 auto;
+}
+
+section > p:first-of-type, main > p{
+    padding: 1rem 0; 
+    max-width: 65ch;
+    margin: 0 auto;
+}
+
+section > p:first-of-type{
+    border-bottom: 4px solid var(--dk-teal-rgba);
+    margin-bottom: 1rem;
+}
+
+main > p{
+    grid-column: 1/-1;
+    padding: 1rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow-sm);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border: 4px solid var(--teal-rgba);
+}
+
+strong{
+    font-weight: 600;
+    background-color: var(--lt-blue);
+}
+
+code{
+    font-family: monospace;
+    font-size: 1.25rem;
+}
+
+dt{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0.25rem 0 0.5rem 1rem;
+}
+
+dd{
+    margin: 0.25rem 0 0.5rem 2rem;
+}
+
+dd code, p code, li code{
+    font-size: 1.1rem;
+}
+
+p code, li code{
+    background-color: var(--dk-blue);
+    color: var(--light-gray);
+}
+
+#section1 img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#section4 p:first-of-type{
+    border-bottom: none;
+    margin: 0;
+}
+
+#section4 ul{
+    border-bottom: 4px solid var(--dk-teal-rgba);
+    margin-bottom: 1rem;
+    padding: 0 0 1rem 0.5rem;
+}
+
+#section4 li{
+    display: block;
+    padding: 0.5rem 0;
+}
+
+#section4 li::before{
+    content: "★ ";
+}
+
+#section5 p:last-of-type{
+    margin-top: 1rem;
+}
+
+#section6 div{
+    width: 300px;
+    height: 200px;
+    margin: 1rem auto;
+}
+
+#section7 div{
+    width: 100%;
+    height: 100px;
+    margin: 1rem auto;
+}
+
+#btt{
+    display: block;
+    height: 50px;
+    grid-column: 1/-1;
+    justify-self: end;
+}  
+
+#btt svg{
+    width: 50px;
+    fill: var(--dk-teal);
+    filter: var(--filter-shadow-lg);
+}
+
+#btt:hover svg{
+    fill: var(--dk-teal-rgba);
+    filter: var(--filter-shadow-sm);
+}
+
+footer{
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--white);
+    width: calc(100% - 2rem);
+    max-width: calc(1200px - 2rem);
+    margin: 0 auto;
+    box-shadow: var(--box-shadow-sm);
+}
 /* For the first link in this section: */
 #section2 a:first-of-type{
     background-color: var(--lt-blue);
@@ -375,9 +614,14 @@ footer{
             - right: 8px
             - bottom: 16px
             - left: 60px
+            
 */
+
 #section2 div > p:last-of-type{
-    
+    background-color: var(--teal-rgba);
+    border: 4px dashed var(--dk-gray);
+    margin: 16px 60px 32px 8px;
+    padding: 32px 8px 16px 60px;    
 }
 
  /* For the div wrapped around that paragraph to show the space its taking up within its container */
@@ -394,7 +638,10 @@ footer{
         - add the small box shadow, using the variable in the root
 */
 #section2 a:first-of-type:hover{
-
+background-color: var(--dk-blue);
+    color: var(--white);
+    border-color: var(--lt-blue);
+    box-shadow: var(--box-shadow-sm);
 }
 
 #section2 a:last-of-type:hover{
@@ -418,7 +665,11 @@ footer{
         - add the small filter drop shadow from the CSS variables in the root
 */
 #section3 img{
-    
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    filter: var(--filter-shadow-sm);
 }
 
 #section3 div::before{
@@ -460,6 +711,16 @@ footer{
         - move this to the right from its original location by 25px
 */
 #section3 div::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--lt-blue);
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    top: -50px;
+    left: 25px;
 }
 
 
@@ -481,7 +742,7 @@ footer{
             - left: 0
 */
 #section4 p:last-of-type{
-
+    margin: 1rem 0;
 }
 
 /* ------------- SECTION 5 STYLES ---------------- */
@@ -518,7 +779,7 @@ footer{
         - add the puppy-photo as a repeating background to the container
 */
 #bg-img-3{
-    
+    background: var(--lt-blue) center repeat url("images/puppy-photo.jpg");
 }
 
 /* For the fourth div, let's style this like the second div, but let's change the height of the div to 100px, so it fits the height of the image. It will make it look like the image and div are the same height */
@@ -545,7 +806,9 @@ footer{
         - add the wood background texture from the images folder
 */
 #pattern1{
-    
+    background-color: var(--light-gray);
+    background-size: 110%;
+    background-image: url("images/wood.png");
 }
 
 /* For the second div, the pattern is from from Hero Pattern. These actually give you SVG code to paste into your CSS */
@@ -602,7 +865,7 @@ footer{
         - float the image to the right
 */
 #dog-house{
-    
+    float: right;
 }
 
 /* When you use floats, you have to be sure to clear them so that the rest of your page after the floats displays normally. Let's use the display section to clear the floats (because it is the next tag outside of our container in the HTML) */
@@ -611,7 +874,7 @@ footer{
         - clear any floats
 */
 #section9{
-    
+    clear: both;
 }
 
 /* ------------- SECTION 9 STYLES ---------------- */
